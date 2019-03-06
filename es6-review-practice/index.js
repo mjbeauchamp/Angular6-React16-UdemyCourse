@@ -1,20 +1,25 @@
-class Car {
-    constructor(brand, model, year){
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
-    }
-
-    displayCarInfo () {
-        console.log(this.brand, this.model, this.year)
-    }
-}
+const Car = require('./Car')
+const CarService = require('./services/CarService')
 
 let car1 = new Car("Ford", "Focus", 2019);
 let car2 = new Car("Toyota", "Corolla", 2007)
 
 car1.displayCarInfo();
 car2.displayCarInfo();
+
+
+
+const carService = new CarService("Super Cars", "Spain")
+
+carService.addCar(car1)
+carService.addCar(car2)
+console.log(carService)
+
+
+
+
+
+////My Practice
 
 class FantasticBeast {
     constructor(name = "", weight = "", color = "", powerLevel = 0){
